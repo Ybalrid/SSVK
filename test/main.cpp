@@ -1,14 +1,7 @@
 #include <iostream>
-
-#ifdef _WIN32
-//Include WIN32 api
-#include <Windows.h>
-#endif
-
-#include "KeySender.hpp"
-#include "KeySenderWindows.hpp"
-#include "KeySenderLinux.hpp"
 #include <memory>
+
+#include <SSKV.hpp>
 
 using namespace SSVK;
 
