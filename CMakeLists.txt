@@ -22,5 +22,8 @@ add_library(SSVK SHARED ${SSVK_SRC} ${SSVK_INCLUDE})
 add_executable(SSVK_TEST ${SSVK_TESTCODE})
 target_link_libraries(SSVK_TEST SSVK)
 
+INSTALL(DIRECTORY include DESTINATION inlcude)
+INSTALL(TARGETS SSVK DESTINATION lib)
+
 
 
