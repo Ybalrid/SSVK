@@ -9,7 +9,7 @@ int main(void)
 {
 	std::cout << "Just a simple demo..." << std::endl;
 #ifdef _WIN32
-	MessageBox(NULL,
+	MessageBox(nullptr,
 		"We will input a series of keystroke to open the Firefox program via the Run dialog.\n"
 		"This program will press the keys : WINDOWS KEY + R; F; I; R; E; F; O; X; RETURN;",
 		"open firefox",
@@ -62,7 +62,7 @@ int main(void)
 	ks->sendKeyPress(KC_RETURN);
 
 #ifdef _WIN32
-	MessageBox(NULL,
+	MessageBox(nullptr,
 		"Now we will open the task manager with the keyboard shortcut : CTRL + ALT + ESC",
 		"open taskmgr",
 		MB_OK);
