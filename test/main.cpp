@@ -39,6 +39,8 @@ int main(void)
 
 	std::cerr << "This program will simultaneously press ALT + F2 to oppen the command prompt of your Desktop Environement, they Type the command \"firefox\" and press RETURN to run it" << std::endl;
 
+    std::cin.get();
+
 	ks->sendKeyDown(KC_ALT);
 	ks->sendKeyDown(KC_F2);
 

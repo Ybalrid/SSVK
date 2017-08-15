@@ -19,12 +19,23 @@ namespace SSVK
 	class SSVK_DLL KeySenderLinux : public KeySender
 	{
 	public:
+        ///Construct a key sender object for Linux and populate the symbol map
 		KeySenderLinux();
+
+        ///Destructor
 		~KeySenderLinux();
 
+        ///Send a key press (donw, then up) via Xtst
 		void sendKeyPress(UKeyCode code) override;
+
+        ///Send a key up (release) via Xtst
 		void sendKeyUp(UKeyCode code) override;
+
+        ///Send a key down (push) via Xtst
 		void sendKeyDown(UKeyCode code) override;
+
+        ///Wait for some milliseconds
+        ///\param millisec time to wait in milliseconds
 		void delay(int millisec) override;
 
 	private:
