@@ -12,9 +12,18 @@ Please note that when initializing a KeySender object, a table (sotred as an `st
 Note that you are sending key press without any way to know by code if they are actually working. This is intended to write really simple automation code, but not reliable/sensible code. 
 
 Do not be [Tom Scott](https://youtu.be/lIFE7h3m40U?t=4m11s), do not use janky open source softawre to deploy parachutes. :wink:
-___
 
-Dependencies:
+## Dependencies:
 
  - On Windows, the library just issues call to the Win32 API. You don't need to install any special library beside your compiler
  - On Linux, this program is using the XTest extension of the XLib that may not installed by default on your system (linkage with `-lX11 -lXtst`)
+ 
+## Building
+
+ - On Windows, just run CMake and you are done
+ - On Linux, you'll just need to install the developement libraries for x11 (xorg-x11) and the xtst
+ 
+## Installing and using 
+
+ - CMake will install the shared library and the headers in your installation prefix
+ I don't have a "find_SSVK" script yet, but it's comming!
