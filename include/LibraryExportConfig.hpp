@@ -9,5 +9,5 @@
 #define EXPIMP_TEMPLATE extern
 #endif
 #else
-#define SSVK_EXPORT
+#define SSVK_DLL
 #endif
