@@ -17,14 +17,13 @@ file(GLOB SSVK_SRC src/*.cpp)
 file(GLOB SSVK_INCLUDE include/*.hpp)
 file(GLOB SSVK_TESTCODE test/*.cpp)
 
-if(UNIX)
-    find_library(X11 REQUIRED)
-endif()
-
 add_definitions(-DDLLEXPORT)
 add_library(SSVK SHARED ${SSVK_SRC} ${SSVK_INCLUDE})
 
-target_link_libraries(SSVK X11 Xtst)
+if(UNIX)
+	find_library(X11 REQUIRED)
+	target_link_libraries(SSVK X11 Xtst)
+endif()
 
 add_executable(SSVK_TEST ${SSVK_TESTCODE})
 target_link_libraries(SSVK_TEST SSVK)
